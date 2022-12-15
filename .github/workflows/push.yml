@@ -19,6 +19,7 @@ jobs:
         run: docker build . -t $APP_IMAGE
 
   Deploy:
+    runs-on: ubuntu-latest
     if: startsWith(github.ref, 'refs/branches/main')
     steps:
       - name: Push Image
